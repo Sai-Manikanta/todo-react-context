@@ -4,13 +4,16 @@ import Navbar from './components/NavBar';
 
 // contexts
 import ThemeContextProvider from './contexts/ThemeContext';
+import AuthContextProvider from './contexts/AuthContext';
 
 function App() {
   return (
     <div className="App">
       <ThemeContextProvider>
-        <Navbar />
-        <BookList />
+        <AuthContextProvider>
+          <Navbar />
+          <BookList />
+        </AuthContextProvider>
       </ThemeContextProvider>
     </div>
   );
